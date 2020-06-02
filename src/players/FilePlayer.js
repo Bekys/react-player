@@ -278,9 +278,9 @@ export default class FilePlayer extends Component {
   }
 
   render () {
-    const { url, playing, loop, controls, muted, config, width, height, isAudio, controlsList, ...leftProps } = this.props
+    const { url, playing, loop, controls, muted, config, width, height, controlsList, ...leftProps } = this.props
     const useAudio = this.shouldUseAudio(this.props)
-    const Element = useAudio || isAudio ? 'audio' : 'video'
+    const Element = useAudio ? 'audio' : 'video'
     const style = {
       width: width === 'auto' ? width : '100%',
       height: height === 'auto' ? height : '100%'
